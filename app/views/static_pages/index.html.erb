@@ -1,2 +1,66 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<!DOCTYPE html>
+	<head>
+		<title>shuttershock productions</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/galleria-1.2.9.min.js"></script>
+
+
+	</head>
+	<body>
+
+		<style type="text/css">
+			@font-face {font-family: "Neutrabold"; src: url("<%= asset_path('neutrasc.otf') %>") format("truetype");}
+		</style>
+
+		<header class='header' role='banner'>
+			
+			<nav role='navigation' class='top-navigation'>
+				
+				<ul class='nav'>
+					<li><a href="samples.html" >work</a></li>
+					<li><a href="facilities.html" >facilities</a></li>
+					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png" %></a></li>
+					<li><a href="clients.html" >clients</a></li>
+					<li><a href="contact_page.html" >contact</a></li>
+				</ul>
+				
+			</nav>
+			
+		</header>
+
+		<div class='core'>
+			<br>
+		<div class='featured-video'>
+			<div class='video-box'>
+				<iframe src="http://player.vimeo.com/video/<%= @videos.first["id"] %>" 
+					width="800" height="450" style="border: 0px;" 
+					webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+				</iframe>
+			</div>
+		</div>
+
+		<!-- <div>
+			<p>ShutterShock Productions specializes in serving your corporate advertising needs, both locally and nationwide. We have a proven track record with producing effective videos used to enhance corporate sales, promote training, and provide direct response media. We use the newest CMOS sensor cameras to bring you the highest quality video possible. Our 10 years of experience allows us to deliver a strong Return on Investment.</p>
+
+		</div> -->
+
+		</div>
+
+		<nav role='navigation' class='bottom-navigation'>
+			<a href="index.html"><%= image_tag "logo_icon.jpg" %></a>
+			<div class='social nav'>
+				<a href="https://www.facebook.com/ShutterShockProductions" target='_blank'>facebook</a>
+				<a href="https://twitter.com/ShutterShockVid" target='_blank'>twitter</a>
+				<a href="http://vimeo.com/kevw85" target='_blank'>vimeo</a>
+				<a href="https://youtube.com" target='_blank'>youtube</a>
+			</div>
+			<p class='copyright'>
+				&copy; 2013 shuttershock productions
+			</p>
+		</nav>
+		
+	</body>
+</html>
