@@ -6,6 +6,9 @@ gem 'rails', '4.0.0.rc2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# Vimeo gem for dynamic video linking
+gem 'vimeo'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0.rc2'
 
