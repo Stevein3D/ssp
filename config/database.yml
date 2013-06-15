@@ -16,9 +16,9 @@
 #
 development:
   adapter: postgresql
-  database: localhost
-  username: user
-  database: app-dev
+  database: ssp_development
+  username: ssp
+  password: 
   pool: 5
   timeout: 5000
 
