@@ -30,41 +30,21 @@
 			</nav>
 			
 		</header>
-		
-		
-		<div class='featured-video'>
-			<div class='video-box'>
-				<iframe src="http://player.vimeo.com/video/<%= @videos.first["id"] %>" 
-					width="800" height="450" style="border: 0px;" 
-					webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
-				</iframe>
-			</div>
-		</div>
-
-		<div class='album-collection group'>
-
-			<div id='work-albums'>
-				<div class='albums nav'>
-					<%= image_tag 'logo_tiny.png'%>
-					<a href="#"><h2>recent</h2></a>
-					<a href="#"><h2>arts</h2></a>
-					<a href="#"><h2>corporate</h2></a>
-					<a href="#"><h2>live</h2></a>
-					<%= image_tag 'logo_tiny.png'%>
-				</div>
-			</div>
-			<div class='vid-row'>
-				<% @videos.each do |clip| %>
-					<div class='video-select'>
-						<div class='album-video'>
-							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail'}%>
-							<h1><%= clip["title"] %></h1>
-						</div>
-						<div class='album-info'>
-							<p><%= clip["description"] %></p>
-						</div>
-					</div>
-				<% end %>
+		<div class='form-container'>
+			<div class='form-box'>
+				<h1>send us an email</h1>		
+				<form action="contact.php" method="post">
+					<h2>name</h2>
+					<input type="text" name="cf_name"><br>
+					<h2>email</h2>
+					<input type="text" name="cf_email"><br>
+					<h2>project type</h2>
+					<input type="text" name="cf_project_type"><br>
+					<h2>message</h2>
+					<textarea name="cf_message"></textarea><br>
+					<br><input type="submit" value="Send">
+					<input type="reset" value="Clear">
+				</form>
 			</div>
 		</div>
 
@@ -83,3 +63,6 @@
 		
 	</body>
 </html>
+
+
+		
