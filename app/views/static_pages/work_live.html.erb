@@ -60,12 +60,12 @@
 				<% @videos.each do |clip| %>
 					<div class='video-select'>
 						<div class='album-video'>
-							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail'}%>
+							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
 							<h1><%= clip["title"] %></h1>
 						</div>
-						<div class='album-info'>
+						<a href="<%= clip['url']%>" target="_top"><div class='album-info'>
 							<p><%= clip["description"] %></p>
-						</div>
+						</div></a>
 					</div>
 				<% end %>
 			</div>
