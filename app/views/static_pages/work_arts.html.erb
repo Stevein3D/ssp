@@ -37,7 +37,7 @@
 		
 		<div class='featured-video'>
 			<div class='video-box'>
-				<iframe name="video_player" src="http://player.vimeo.com/video/<%= @videos.first["id"] %>" 
+				<iframe src="http://player.vimeo.com/video/<%= @videos.first["id"] %>" 
 					width="800" height="450" style="border: 0px;" 
 					webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
 				</iframe>
@@ -56,20 +56,16 @@
 					<%= image_tag 'logo_tiny.png'%>
 				</div>
 			</div>
-
-		
-
-
 			<div class='vid-row'>
 				<% @videos.each do |clip| %>
 					<div class='video-select'>
 						<div class='album-video'>
-							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
+							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail'}%>
 							<h1><%= clip["title"] %></h1>
 						</div>
-						<a href="<%= clip['url']%>" target="video_player"><div class='album-info'>
+						<div class='album-info'>
 							<p><%= clip["description"] %></p>
-						</div></a>
+						</div>
 					</div>
 				<% end %>
 			</div>

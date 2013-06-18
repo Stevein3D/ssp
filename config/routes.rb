@@ -4,6 +4,9 @@ Ssp::Application.routes.draw do
 
   get "/index" => "static_pages#index", :as => :index
   get "/work" => "static_pages#work", :as => :work
+  get "/work_arts" => "static_pages#work_arts", :as => :work_arts
+  get "/work_corporate" => "static_pages#work_corporate", :as => :work_corporate
+  get "/work_live" => "static_pages#work_live", :as => :work_live
   get "/facilities" => "static_pages#facilities", :as => :facilities
   get "/clients" => "static_pages#clients", :as => :clients
   get "/contact_page" => "static_pages#contact_page", :as => :contact_page

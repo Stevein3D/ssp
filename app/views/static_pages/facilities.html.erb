@@ -31,45 +31,13 @@
 			
 		</header>
 		
-		
-		<div class='featured-video'>
-			<div class='video-box'>
-				<iframe src="http://player.vimeo.com/video/<%= @videos.first["id"] %>" 
-					width="800" height="450" style="border: 0px;" 
-					webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
-				</iframe>
-			</div>
-		</div>
-
-		<div class='album-collection group'>
-
-			<div id='work-albums'>
-				<div class='albums nav'>
-					<%= image_tag 'logo_tiny.png'%>
-					<a href="#"><h2>recent</h2></a>
-					<a href="#"><h2>arts</h2></a>
-					<a href="#"><h2>corporate</h2></a>
-					<a href="#"><h2>live</h2></a>
-					<%= image_tag 'logo_tiny.png'%>
-				</div>
-			</div>
-			<div class='vid-row'>
-				<% @videos.each do |clip| %>
-					<div class='video-select'>
-						<div class='album-video'>
-							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail'}%>
-							<h1><%= clip["title"] %></h1>
-						</div>
-						<div class='album-info'>
-							<p><%= clip["description"] %></p>
-						</div>
-					</div>
-				<% end %>
-			</div>
+		<div class='construction'>
+			<h2>Page under development.<br>Check back soon.</h2>
+			<%= image_tag 'construction_logo.png'%>
 		</div>
 
 		<nav role='navigation' class='bottom-navigation'>
-			<a href="index.html"><%= image_tag "logo_icon.jpg" %></a>
+			<a href="index.html"><%= image_tag 'logo_icon.jpg'%></a>
 			<div class='social nav'>
 				<a href="https://www.facebook.com/ShutterShockProductions" target='_blank'>facebook</a>
 				<a href="https://twitter.com/ShutterShockVid" target='_blank'>twitter</a>
@@ -80,6 +48,3 @@
 				&copy; 2013 shuttershock productions
 			</p>
 		</nav>
-		
-	</body>
-</html>
