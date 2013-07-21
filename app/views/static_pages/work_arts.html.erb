@@ -56,6 +56,8 @@
 					<%= image_tag 'logo_tiny.png'%>
 				</div>
 			</div>
+
+
 			<div class='vid-row'>
 				<% @videos.each do |clip| %>
 					<div class='video-select'>
@@ -63,71 +65,24 @@
 							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
 							<h1><%= clip["title"] %></h1>
 						</div>
-						<a href="<%= clip['url']%>" target="_top"><div class='album-info'>
-							<p><%= clip["description"] %></p>
-						</div></a>
+						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
 					</div>
 				<% end %>
 			</div>
 
-			<!-- <div class='vid-row'>
-				<div class='video-select'>
-					<div class='album-video'>
-						<%= image_tag '#{video["thumbnail_medium"]', {:class => 'thumbnail'}%>
-						<h1>video title</h1>
-					</div>
-					<div class='album-info'>
-					</div>
-				</div>
-				<div class='video-select'>
-					<div class='album-video'>
-						<%= image_tag 'pretend_video.jpg', {:class => 'thumbnail'}%>
-						<h1>video title</h1>
-					</div>
-					<div class='album-info'>
-						<p>Video info...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius nunc convallis arcu pretium non fermentum nisl aliquam. Fusce eget nisi vel libero volutpat sollicitudin. Sed egestas mollis risus eu bibendum.</p>
-					</div>
-				</div>
-				<div class='video-select'>
-					<div class='album-video'>
-						<%= image_tag 'pretend_video.jpg', {:class => 'thumbnail'}%>
-						<h1>video title</h1>
-					</div>
-					<div class='album-info group'>
-						<p>Video info...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius nunc convallis arcu pretium non fermentum nisl aliquam. Fusce eget nisi vel libero volutpat sollicitudin. Sed egestas mollis risus eu bibendum.</p>
-					</div>
-				</div>
-			</div>
+		</div>
 
-			<div class='vid-row'>
-				<div class='video-select'>
-					<div class='album-video'>
-						<%= image_tag 'pretend_video.jpg', {:class => 'thumbnail'}%>
-						<h1>video title</h1>
-					</div>
-					<div class='album-info'>
-						<p>Video info...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius nunc convallis arcu pretium non fermentum nisl aliquam. Fusce eget nisi vel libero volutpat sollicitudin. Sed egestas mollis risus eu bibendum.</p>
-					</div>
-				</div>
-				<div class='video-select'>
-					<div class='album-video'>
-						<%= image_tag 'pretend_video.jpg', {:class => 'thumbnail'}%>
-						<h1>video title</h1>
-					</div>
-					<div class='album-info'>
-						<p>Video info...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius nunc convallis arcu pretium non fermentum nisl aliquam. Fusce eget nisi vel libero volutpat sollicitudin. Sed egestas mollis risus eu bibendum.</p>
-					</div>
-				</div>
-				<div class='video-select'>
-					<div class='album-video'>
-						<%= image_tag 'pretend_video.jpg', {:class => 'thumbnail'}%>
-						<h1>video title</h1>
-					</div>
-					<div class='album-info'>
-						<p>Video info...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius nunc convallis arcu pretium non fermentum nisl aliquam. Fusce eget nisi vel libero volutpat sollicitudin. Sed egestas mollis risus eu bibendum.</p>
-					</div>
-				</div>
-			</div> -->
+		<script type="text/javascript">
+				
+				$('.album-info').click(function(){
+					var $url = $(this).attr('id');
+					$('iframe').attr('src',"http://player.vimeo.com/video/" + $url + "?autoplay=1");
+				});
+				
+		</script>
+
 
 		</div>
 

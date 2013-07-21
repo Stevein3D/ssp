@@ -173,6 +173,7 @@ a:visited{color: #6d6e71;}
 	text-align: center;
 	background: white;
 	font-family: "Neutrabold", Verdana, Tahoma;
+	cursor: pointer;
 	opacity: 0.0;
 	border: 4px ridge;
 		-webkit-transition: all 0.2s ease-in-out;
