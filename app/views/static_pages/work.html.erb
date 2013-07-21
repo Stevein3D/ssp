@@ -85,6 +85,7 @@
 				$('.album-info').click(function(){
 					var $url = $(this).attr('id');
 					$('iframe').attr('src',"http://player.vimeo.com/video/" + $url + "?autoplay=1");
+					$("html, body").delay(800).animate({ scrollTop: 0 }, "slow");
 				});
 				
 		</script>
