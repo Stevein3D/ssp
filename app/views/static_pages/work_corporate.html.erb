@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<head>
-		<title>shuttershock productions</title>
-		
+		<TITLE>Shuttershock Productions</TITLE>
+		<%= favicon_link_tag 'favicon.ico' %>
 		<%= stylesheet_link_tag    'application', media: 'all' %>
 		<%= javascript_include_tag 'application' %>
 
@@ -28,7 +28,7 @@
 					<li><a href="facilities.html" >facilities</a></li>
 					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png" %></a></li>
 					<li><a href="clients.html" >clients</a></li>
-					<li><a href="contact_page.html" >contact</a></li>
+					<li><a href="contact.html" >contact</a></li>
 				</ul>
 				
 			</nav>
@@ -75,7 +75,7 @@
 		</div>
 
 		<script type="text/javascript">
-				
+				$('html, body').delay(1200).animate({scrollTop: $(document).height()-$(window).height()}, 800, "swing");
 				$('.album-info').click(function(){
 					var $url = $(this).attr('id');
 					$('iframe').attr('src',"http://player.vimeo.com/video/" + $url + "?autoplay=1") ;

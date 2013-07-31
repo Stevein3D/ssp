@@ -1,5 +1,5 @@
 Ssp::Application.routes.draw do
-  
+  resources :messages
   root :to => "static_pages#index"
 
   get "/index" => "static_pages#index", :as => :index
@@ -9,7 +9,10 @@ Ssp::Application.routes.draw do
   get "/work_live" => "static_pages#work_live", :as => :work_live
   get "/facilities" => "static_pages#facilities", :as => :facilities
   get "/clients" => "static_pages#clients", :as => :clients
-  get "/contact_page" => "static_pages#contact_page", :as => :contact_page
+  
+    
+  get '/contact' => 'messages#contact', :as => :new
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

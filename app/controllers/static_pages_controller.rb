@@ -26,9 +26,6 @@ class StaticPagesController < ApplicationController
   def facilities
   end
 
-  def contact
-  end
-
   def clients
   end
 end

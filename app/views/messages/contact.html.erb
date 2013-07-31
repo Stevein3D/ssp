@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 	<head>
-		<TITLE>Shuttershock Productions</TITLE>
-		<%= favicon_link_tag 'favicon.ico' %>
+		<title>shuttershock productions</title>
 		<%= stylesheet_link_tag    'application', media: 'all' %>
 		<%= javascript_include_tag 'application' %>
 		<!-- <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
@@ -26,19 +25,44 @@
 					<li><a href="facilities.html" >facilities</a></li>
 					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png" %></a></li>
 					<li><a href="clients.html" >clients</a></li>
-					<li><a href="contact.html" >contact</a></li>
+					<li><a href="contact_page.html" >contact</a></li>
 				</ul>				
 			</nav>
 			
 		</header>
-		
-		<div class='construction'>
-			<h2>Page under development.<br>Check back soon.</h2>
-			<%= image_tag 'construction_logo.png'%>
-		</div>
+		<div class="contact_body">
 
+			<%= image_tag 'ssp_team2.png', {:class => 'team_photo'}%>
+
+		<h1>We would love to hear from you.</h1>
+
+		<%= form_for Message.new do |form| %>
+  			
+    		<div class="field">
+      			<%= form.label :name %>
+      			<%= form.text_field :name %>
+    		</div>
+    
+    		<div class="field">
+      			<%= form.label :email %>
+      			<%= form.text_field :email %>
+    		</div>
+    
+    		<div class="field">
+      			<%= form.label :content %>
+      			<%= form.text_area :content %>
+    		</div>
+  			
+  
+  			
+    		<%= form.submit "Send" %>
+  				
+		<% end %>
+
+		</div>
+		
 		<nav role='navigation' class='bottom-navigation'>
-			<a href="index.html"><%= image_tag 'logo_icon.jpg'%></a>
+			<a href="index.html"><%= image_tag "logo_icon.jpg" %></a>
 			<div class='social nav'>
 				<a href="https://www.facebook.com/ShutterShockProductions" target='_blank'>facebook</a>
 				<a href="https://twitter.com/ShutterShockVid" target='_blank'>twitter</a>
