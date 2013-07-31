@@ -1,11 +1,10 @@
 ActionMailer::Base.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => "shuttershockproductions.com",
-  :user_name            => "shuttershockfilms@gmail.com",
-  :password             => "5dmrkiii",
-  :authentication       => "plain",
-  :enable_starttls_auto => true   
+  address: "smtp.sendgrid.net",
+  port: 587,
+  authentication: "plain",
+  user_name: "app16313944@heroku.com",
+  password: ENV['SMTP_PASSWORD'],
+  enable_starttls_auto: true   
   }
 
 # ActionMailer::Base.default_url_options[:host] = "localhost:3000"

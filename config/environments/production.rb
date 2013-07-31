@@ -21,10 +21,10 @@ Ssp::Application.configure do
 
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-  address: "smtp.gmail.com",
+  address: "smtp.sendgrid.net",
   port: 587,
   authentication: "plain",
-  user_name: "shuttershockfilms@gmail.com",
+  user_name: "app16313944@heroku.com",
   password: ENV['SMTP_PASSWORD'],
   enable_starttls_auto: true
 }
