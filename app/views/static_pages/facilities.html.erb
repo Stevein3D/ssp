@@ -9,7 +9,11 @@
 
 		<!-- <script src="js/jquery-1.9.1.min.js"></script> -->
 
-
+		<script>
+    		$(function(){
+      			$("#slides").slidesjs({ width: 1080, height: 720});
+    		});
+  		</script>
 	</head>
 	<body>
 
@@ -31,12 +35,32 @@
 			</nav>
 			
 		</header>
-		
-		<div class='construction'>
-			<h2>Page under development.<br>Check back soon.</h2>
-			<%= image_tag 'construction_logo.png'%>
-		</div>
 
+		<div class = 'wrapper'>
+		<div class = 'container'>
+			<div id="slides">
+    			<%= image_tag 'facilities_1.png'%>
+    			<%= image_tag 'facilities_2.png'%>
+    			<%= image_tag 'facilities_3.png'%>
+    			<%= image_tag 'facilities_4.png'%>
+    			<a href="#" class="slidesjs-previous slidesjs-navigation"><h4>previous</h4></a>
+      			<a href="#" class="slidesjs-next slidesjs-navigation"><h4>next</h4></a>
+  			</div>
+  		</div>
+  		</div>
+ 
+		<script>
+    		$(function() {
+      			$('#slides').slidesjs({
+        			width: 720,
+        			height: 480,
+        			navigation: {effect: "fade"},
+        			pagination: {effect: "fade"},
+        			effect: {fade: {speed: 400}}
+      			});
+    		});
+  		</script>
+  		
 		<nav role='navigation' class='bottom-navigation'>
 			<a href="index.html"><%= image_tag 'logo_icon.jpg'%></a>
 			<div class='social nav'>

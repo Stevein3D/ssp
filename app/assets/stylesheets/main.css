@@ -1,6 +1,3 @@
-
-body{
-}
 .group:after {
 	content: "";
 	display: table;
@@ -8,11 +5,18 @@ body{
 }
 h1{
 	font-family: "Neutrabold", Verdana, Tahoma;
+	color: rgb(109, 110, 113);
+	font-size: 25px;
 }
 h2{
 	font-family: "Neutrabold", Verdana, Tahoma;
 	font-size: 25px;
 	/*color: black;*/
+}
+h4{
+	font-family: "Neutrabold", Verdana, Tahoma;
+	color: rgb(109, 110, 113);
+	font-size: 20px;
 }
 a{
 	text-decoration: none;
@@ -155,8 +159,6 @@ a:visited{color: #6d6e71;}
 .album-video h1{
 	margin: -20px 0 5px 0;
 	text-align: center;
-	font-size: 25px;
-	/*color: red;*/
 }
 .thumbnail{
 	width: 300px;
@@ -203,7 +205,86 @@ a:visited{color: #6d6e71;}
 	border: 4px ridge rgb(39,191,238);
 }
 
+.field {
+	font-family: "Neutrabold", Verdana, Tahoma;
+	font-size: 20px;
+	color: rgb(109, 110, 113);}
+
 /** ************ Facilities Page ************** **/
+.wrapper {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+#slides {
+      display: none;
+    }
+#slides h4{
+    	margin-top: 3px;
+    }
+
+#slides .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+    }
+
+#slides .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a h4:link,
+    #slides a h4:visited {
+      color: #333
+    }
+
+    #slides a h4:hover,
+    #slides a h4:active {
+      color: #27bff0
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+  
+
+/** ************ Clients Page ************** **/
 .construction{
 	width: 1140px;
 	margin: 0 auto;

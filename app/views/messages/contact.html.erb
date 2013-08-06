@@ -39,23 +39,21 @@
 		<%= form_for Message.new do |form| %>
   			
     		<div class="field">
-      			<%= form.label :name %>
+      			<%= form.label "Name" %>
       			<%= form.text_field :name %>
     		</div>
-    
+    		<br>
     		<div class="field">
-      			<%= form.label :email %>
+      			<%= form.label "Email" %>
       			<%= form.text_field :email %>
     		</div>
-    
+    		<br>
     		<div class="field">
-      			<%= form.label :content %>
+      			<%= form.label "Message" %>
       			<%= form.text_area :content %>
     		</div>
-  			
-  
-  			
-    		<%= form.submit "Send" %>
+  			<br>
+    		<%= form.submit "Say Hello" %>
   				
 		<% end %>
 
