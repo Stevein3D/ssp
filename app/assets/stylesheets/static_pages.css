@@ -216,6 +216,22 @@ textarea{
 }
 
 /** ************ Facilities Page ************** **/
+.wrapper {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 40px 0;
+	text-align: center;
+}
+.client {
+	padding: 10px 10px;
+	display: inline;
+	text-align: center;
+}
+
+.client_row {
+	margin: 0 auto;
+	text-align: center;
+}
 .construction{
 	width: 1140px;
 	margin: 0 auto;

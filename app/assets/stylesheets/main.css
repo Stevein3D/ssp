@@ -22,12 +22,6 @@ a{
 	text-decoration: none;
 }
 
-.wrapper {
-	width: 1140px;
-	margin: 0 auto;
-	padding: 40px 0;
-	text-align: center;
-}
 /** Nav Section **/
 
 .header{
@@ -288,7 +282,12 @@ a:visited{color: #6d6e71;}
   
 
 /** ************ Clients Page ************** **/
-
+.wrapper {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 40px 0;
+	text-align: center;
+}
 .client {
 	padding: 10px 10px;
 	display: inline;
