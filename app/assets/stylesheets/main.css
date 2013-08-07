@@ -22,6 +22,11 @@ a{
 	text-decoration: none;
 }
 
+.wrapper {
+	width: 1140px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
 /** Nav Section **/
 
 .header{
@@ -211,10 +216,6 @@ a:visited{color: #6d6e71;}
 	color: rgb(109, 110, 113);}
 
 /** ************ Facilities Page ************** **/
-.wrapper {
-	width: 1140px;
-	margin: 0 auto;
-}
 
 .container {
 	width: 800px;
@@ -254,7 +255,8 @@ a:visited{color: #6d6e71;}
       width: 13px;
       height: 0;
       padding-top: 13px;
-      background-image: url(pagination.png);
+      background-image: asset-data-url(pagination.png);
+      /*background-image: url(pagination.png);*/
       background-position: 0 0;
       float: left;
       overflow: hidden;
@@ -285,6 +287,17 @@ a:visited{color: #6d6e71;}
   
 
 /** ************ Clients Page ************** **/
+
+.client {
+	padding: 10px 10px;
+	display: inline;
+}
+
+.client_row {
+	margin: 0 auto;
+	text-align: center;
+}
+
 .construction{
 	width: 1140px;
 	margin: 0 auto;
