@@ -23,7 +23,7 @@
 				<ul class='nav'>
 					<li><a href="work.html" >work</a></li>
 					<li><a href="facilities.html" >facilities</a></li>
-					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png" %></a></li>
+					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png", {:alt => 'Shuttershock Productions', :title => 'Shuttershock Productions'}%></a></li>
 					<li><a href="clients.html" >clients</a></li>
 					<li><a href="contact_page.html" >contact</a></li>
 				</ul>				
@@ -34,7 +34,7 @@
 
 			<%= image_tag 'ssp_team2.png', {:class => 'team_photo'}%>
 
-		<h1>We would love to hear from you.</h1>
+		<h1>we would love to hear from you.</h1>
 
 		<%= form_for Message.new do |form| %>
   			
@@ -60,7 +60,7 @@
 		</div>
 		
 		<nav role='navigation' class='bottom-navigation'>
-			<a href="index.html"><%= image_tag "logo_icon.jpg" %></a>
+			<a href="index.html"><%= image_tag 'logo_icon.jpg', {:alt => 'Shuttershock Productions', :title => 'Shuttershock Productions'}%></a>
 			<div class='social nav'>
 				<a href="https://www.facebook.com/ShutterShockProductions" target='_blank'>facebook</a>
 				<a href="https://twitter.com/ShutterShockVid" target='_blank'>twitter</a>

@@ -28,7 +28,7 @@
 				<ul class='nav'>
 					<li><a href="work.html" >work</a></li>
 					<li><a href="facilities.html" >facilities</a></li>
-					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png" %></a></li>
+					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png", {:alt => 'Shuttershock Productions', :title => 'Shuttershock Productions'}%></a></li>
 					<li><a href="clients.html" >clients</a></li>
 					<li><a href="contact.html" >contact</a></li>
 				</ul>
@@ -69,7 +69,7 @@
 					<div class='video-select'>
 						<div class='album-video'>
 							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
-							<h1><%= clip["title"] %></h1>
+							<h2><%= clip["title"] %></h2>
 						</div>
 						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
 						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
@@ -91,7 +91,7 @@
 		</script>
 
 		<nav role='navigation' class='bottom-navigation'>
-			<a href="index.html"><%= image_tag "logo_icon.jpg" %></a>
+			<a href="index.html"><%= image_tag 'logo_icon.jpg', {:alt => 'Shuttershock Productions', :title => 'Shuttershock Productions'}%></a>
 			<div class='social nav'>
 				<a href="https://www.facebook.com/ShutterShockProductions" target='_blank'>facebook</a>
 				<a href="https://twitter.com/ShutterShockVid" target='_blank'>twitter</a>

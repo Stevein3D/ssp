@@ -12,6 +12,8 @@ body{
 }
 h1{
 	font-family: "Neutrabold", Verdana, Tahoma;
+  font-size: 30px;
+  color: rgb(109, 110, 113);
 }
 h2{
 	font-family: "Neutrabold", Verdana, Tahoma;
@@ -67,7 +69,7 @@ a{
 	transition: all 0.3s ease-in-out;
 }
 .nav a:not(.logo):hover,
-.nav a:not(.logo):focus{color: #fff; background-color: rgba(39, 191, 238, 0.8);}
+.nav a:not(.logo):focus{color: white; background-color: rgba(39, 191, 238, 0.8);}
 a:visited{color: #6d6e71;}
 
 /** Footer Content **/
@@ -99,11 +101,7 @@ a:visited{color: #6d6e71;}
 /** Home Page Content **/
 
 
-.core{
-	/*width: 100%;
-	height: 630px;
-	background: rgba(109,110,113,0.8);*/
-}
+
 .featured-video{
 	width: 1140px;
 	/*height: 600px;*/
@@ -131,10 +129,6 @@ a:visited{color: #6d6e71;}
 	width: 950px;
 	margin: 0 auto;
 }
-/*.video-select{
-	margin: 0 auto;
-	text-align: center;
-}*/
 .albums{
 	text-align: center;
 	padding-bottom: 25px;
@@ -142,7 +136,6 @@ a:visited{color: #6d6e71;}
 }
 .albums h2{
 	display: inline;
-	font-size: 30px;
 }
 .albums a{
 	margin: 0 10px;
@@ -156,10 +149,9 @@ a:visited{color: #6d6e71;}
 	float: left;
 	margin-top: 20px;
 }
-.album-video h1{
+.album-video h2{
 	margin: -20px 0 5px 0;
 	text-align: center;
-	font-size: 25px;
 	/*color: red;*/
 }
 .thumbnail{
@@ -215,7 +207,7 @@ textarea{
 	height:100px;
 }
 
-/** ************ Facilities Page ************** **/
+/** ************ Clients Page ************** **/
 .wrapper {
 	width: 1140px;
 	margin: 0 auto;
@@ -246,6 +238,76 @@ textarea{
 body:hover .construction{
 	opacity: 1.0;
 }
+
+/** ************ Facilities Page ************** **/
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+#slides {
+      display: none;
+    }
+#slides h4{
+    	margin-top: 3px;
+    }
+
+#slides .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+    }
+
+#slides .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      /*background-image: asset-data-url(pagination.png);*/
+      background-image: url(pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a h4:link,
+    #slides a h4:visited {
+      color: #333
+    }
+
+    #slides a h4:hover,
+    #slides a h4:active {
+      color: #27bff0
+    }
+
+    .navbar {
+      overflow: hidden
+    }
 
 
 

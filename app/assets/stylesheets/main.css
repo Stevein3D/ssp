@@ -6,7 +6,7 @@
 h1{
 	font-family: "Neutrabold", Verdana, Tahoma;
 	color: rgb(109, 110, 113);
-	font-size: 25px;
+	font-size: 30px;
 }
 h2{
 	font-family: "Neutrabold", Verdana, Tahoma;
@@ -67,7 +67,7 @@ a{
 	transition: all 0.3s ease-in-out;
 }
 .nav a:not(.logo):hover,
-.nav a:not(.logo):focus{color: #fff; background-color: rgba(39, 191, 238, 0.8);}
+.nav a:not(.logo):focus{color: white; background-color: rgba(39, 191, 238, 0.8);}
 a:visited{color: #6d6e71;}
 
 /** Footer Content **/
@@ -98,12 +98,6 @@ a:visited{color: #6d6e71;}
 
 /** Home Page Content **/
 
-
-.core{
-	/*width: 100%;
-	height: 630px;
-	background: rgba(109,110,113,0.8);*/
-}
 .featured-video{
 	width: 1140px;
 	/*height: 600px;*/
@@ -114,7 +108,6 @@ a:visited{color: #6d6e71;}
 	width: 800px;
 	height: 450px;
 	margin: 0 auto;
-	/*padding: 5px;*/
 	border: 4px ridge rgb(39,191,238);
 }
 
@@ -131,10 +124,6 @@ a:visited{color: #6d6e71;}
 	width: 950px;
 	margin: 0 auto;
 }
-/*.video-select{
-	margin: 0 auto;
-	text-align: center;
-}*/
 .albums{
 	text-align: center;
 	padding-bottom: 25px;
@@ -142,7 +131,6 @@ a:visited{color: #6d6e71;}
 }
 .albums h2{
 	display: inline;
-	font-size: 30px;
 }
 .albums a{
 	margin: 0 10px;
@@ -156,10 +144,11 @@ a:visited{color: #6d6e71;}
 	float: left;
 	margin-top: 20px;
 }
-.album-video h1{
+.album-video h2{
 	margin: -20px 0 5px 0;
 	text-align: center;
 }
+
 .thumbnail{
 	width: 300px;
 	height: 169px;
@@ -250,8 +239,8 @@ a:visited{color: #6d6e71;}
       width: 13px;
       height: 0;
       padding-top: 13px;
-      background-image: asset-data-url(pagination.png);
-      /*background-image: url(pagination.png);*/
+      /*background-image: asset-data-url(pagination.png);*/
+      background-image: url(pagination.png);
       background-position: 0 0;
       float: left;
       overflow: hidden;
