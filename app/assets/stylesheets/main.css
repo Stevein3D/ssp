@@ -11,7 +11,12 @@ h1{
 h2{
 	font-family: "Neutrabold", Verdana, Tahoma;
 	font-size: 25px;
-	/*color: black;*/
+}
+h3{
+	font-family: "Neutrabold", Verdana, Tahoma;
+	color: rgb(109, 110, 113);
+	font-size: 23px;
+	margin-top: -20px;
 }
 h4{
 	font-family: "Neutrabold", Verdana, Tahoma;
@@ -26,11 +31,6 @@ a{
 
 .header{
 	margin: 30px auto;
-/*	width: 100%;
-	min-height: 630px;
-	background-image: url('../img/background.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;*/
 }
 .top-navigation{
 	width: 1140px;
@@ -46,7 +46,6 @@ a{
 }
 .nav li{
 	display: inline;
-	/*height: 79px;*/
 	line-height: 79px;
 }
 .nav img{
@@ -56,7 +55,6 @@ a{
 	font-family: "Neutrabold", Verdana, Tahoma;
 	font-size: 25px;
 	padding: 2px 10px;
-		/*font-weight: bold;*/
 	color: rgb(109, 110, 113);
 		-webkit-border-radius: 4px;
 		-moz-border-radius: 4px;
@@ -100,7 +98,6 @@ a:visited{color: #6d6e71;}
 
 .featured-video{
 	width: 1140px;
-	/*height: 600px;*/
 	margin: 5px auto 0 auto;
 	text-align: center;
 }
@@ -117,8 +114,7 @@ a:visited{color: #6d6e71;}
 
 .album-collection{
 	width: 1140px;
-	margin: 80px auto;
-	/*border-top: 4px ridge rgb(39,191,238);*/	
+	margin: 80px auto;	
 }
 #work-albums{
 	width: 950px;
@@ -134,7 +130,6 @@ a:visited{color: #6d6e71;}
 }
 .albums a{
 	margin: 0 10px;
-	/*padding: 5px 5px;*/
 }
 .vid-row{
 	margin-left: 80px;
@@ -145,7 +140,6 @@ a:visited{color: #6d6e71;}
 	margin-top: 20px;
 }
 .album-video h2{
-	margin: -20px 0 5px 0;
 	text-align: center;
 }
 
@@ -239,7 +233,7 @@ a:visited{color: #6d6e71;}
       width: 13px;
       height: 0;
       padding-top: 13px;
-      /*background-image: asset-data-url(pagination.png);*/
+      background-image: asset-data-url(pagination-d9775d7f2f6c490d962961932a59eb75.png);
       background-image: url(pagination.png);
       background-position: 0 0;
       float: left;

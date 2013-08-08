@@ -20,6 +20,11 @@ h2{
 	font-size: 25px;
 	/*color: black;*/
 }
+h4{
+  font-family: "Neutrabold", Verdana, Tahoma;
+  color: rgb(109, 110, 113);
+  font-size: 20px;
+}
 a{
 	text-decoration: none;
 }
@@ -150,7 +155,6 @@ a:visited{color: #6d6e71;}
 	margin-top: 20px;
 }
 .album-video h2{
-	margin: -20px 0 5px 0;
 	text-align: center;
 	/*color: red;*/
 }
