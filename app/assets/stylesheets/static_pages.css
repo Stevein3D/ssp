@@ -3,7 +3,7 @@
   They will automatically be included in application.css.
 */
 
-.group:after {
+.clearfix {
   content: "";
   display: table;
   clear: both;
@@ -11,10 +11,11 @@
 h1{
   font-family: "Neutrabold", Verdana, Tahoma;
   color: rgb(109, 110, 113);
-  font-size: 30px;
+  font-size: 28px;
 }
 h2{
   font-family: "Neutrabold", Verdana, Tahoma;
+  color: rgb(109, 110, 113);
   font-size: 25px;
 }
 h3{
@@ -38,7 +39,11 @@ h4{
 a{
   text-decoration: none;
 }
-
+.text-container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
 /** Nav Section **/
 
 .header{
@@ -52,6 +57,9 @@ a{
 .top-navigation li{
   margin: 0 10px;
   list-style-type: none;
+}
+.nav{
+  padding: 0;
 }
 .nav li{
   display: inline;
@@ -254,25 +262,64 @@ a:visited{color: #6d6e71;}
       background-position: 0 -13px
     }
 
-    .slidesjs-pagination li a:hover {
+.slidesjs-pagination li a:hover {
       background-position: 0 -26px
     }
 
-    #slides a h4:link,
-    #slides a h4:visited {
-      color: #333
-    }
+#slides a h4:link,
+#slides a h4:visited {
+    color: #333
+}
 
-    #slides a h4:hover,
-    #slides a h4:active {
-      color: #27bff0
-    }
+#slides a h4:hover,
+#slides a h4:active {
+    color: #27bff0
+}
 
-    .navbar {
-      overflow: hidden
-    }
-  
-
+.navbar {
+    overflow: hidden
+}
+.list-select h2{
+  display: inline;
+  cursor: pointer;
+  text-align: center;
+  padding: 2px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+  border-radius: 4px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.list-select h2:hover,
+.list-select h2:focus{
+  color: white; background-color: rgba(39, 191, 238, 0.8);
+}
+#audio-list{
+  margin: 0 auto;
+  width: 1046px;
+  display: none;
+}
+#video-list{
+  margin: 0 auto;
+  width: 1002px;
+  display: none;  
+}
+.equipment-list{
+  margin: 0 auto;
+  float: left;
+  text-align: left;
+}  
+.equipment-list ul li ul li{
+  font-family: "Neutrabold", Verdana, Tahoma;
+  color: rgb(109, 110, 113);
+  font-size: 18px;
+  list-style-type: circle;
+}
+.equipment-list ul{
+  list-style-type: none;
+}
 /** ************ Clients Page ************** **/
 .wrapper {
   width: 1140px;
