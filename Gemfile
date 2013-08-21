@@ -48,3 +48,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'active_attr'
+
+#heroku css bug
+gem 'rails_12factor', group: :production
