@@ -28,7 +28,7 @@
 				<ul class='nav'>
 					<li><a href="work.html" >work</a></li>
 					<li><a href="facilities.html" >facilities</a></li>
-					<li><a href="index.html" class='logo'><%= image_tag "logo_text_color.png", {:alt => 'Shuttershock Productions', :title => 'Shuttershock Productions'}%></a></li>
+					<li><a href="index.html" class='logo' ><%= image_tag "logo_text_color.png", {:alt => 'Shuttershock Productions', :title => 'Shuttershock Productions'}%></a></li>
 					<li><a href="clients.html" >clients</a></li>
 					<li><a href="contact.html" >contact</a></li>
 				</ul>
@@ -41,7 +41,7 @@
 
 		<div class='featured-video'>
 			<div class='video-box'>
-				<iframe id="video_player" src="http://player.vimeo.com/video/<%= @videos.first["id"] %>" 
+				<iframe id="video_player" src="http://player.vimeo.com/video/<%= @recent.first["id"] %>" 
 					width="800" height="450" style="border: 0px;" 
 					webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
 				</iframe>
@@ -50,22 +50,22 @@
 
 
 
-		<div class='album-collection group'>
+		<div class='album-collection'>
 
 			<div id='work-albums'>
 				<div class='albums nav'>
 					<%= image_tag 'logo_tiny.png'%>
-					<a href="work.html"><h2>recent</h2></a>
-					<a href="work_arts"><h2>arts</h2></a>
-					<a href="work_corporate"><h2>corporate</h2></a>
-					<a href="work_live"><h2>live</h2></a>
+					<h2 class='recent-button'>recent</h2>
+					<h2 class='arts-button'>arts</h2>
+					<h2 class='corporate-button'>corporate</h2>
+					<h2 class='live-button'>live</h2>
 					<%= image_tag 'logo_tiny.png'%>
 				</div>
 			</div>
 
 
-			<div class='vid-row'>
-				<% @videos.each do |clip| %>
+			<div class='vid-row' id='recent'>
+				<% @recent.each do |clip| %>
 					<div class='video-select'>
 						<div class='album-video'>
 							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
@@ -77,11 +77,82 @@
 					</div>
 				<% end %>
 			</div>
-
+			<div class='vid-row' id='arts'>
+				<% @arts.each do |clip| %>
+					<div class='video-select'>
+						<div class='album-video'>
+							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
+							<h3><%= clip["title"] %></h3>
+						</div>
+						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
+					</div>
+				<% end %>
+			</div>
+			<div class='vid-row' id='corporate'>
+				<% @corporate.each do |clip| %>
+					<div class='video-select'>
+						<div class='album-video'>
+							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
+							<h3><%= clip["title"] %></h3>
+						</div>
+						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
+					</div>
+				<% end %>
+			</div>
+			<div class='vid-row' id='live'>
+				<% @live.each do |clip| %>
+					<div class='video-select'>
+						<div class='album-video'>
+							<%= image_tag clip["thumbnail_large"], {:class => 'thumbnail', :id => clip["id"] }%>
+							<h3><%= clip["title"] %></h3>
+						</div>
+						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
+					</div>
+				<% end %>
+			</div>
 		</div>
 
+		<script>
+      		$(function(){
+        		$('.recent-button').click(function(){
+          			$('#arts').fadeOut(800);
+          			$('#corporate').fadeOut(800);
+          			$('#live').fadeOut(800, function(){
+          				$('#recent').delay(800).fadeIn(800);	
+          			});
+        		});
+				$('.arts-button').click(function(){
+          			$('#recent').fadeOut(800);
+          			$('#corporate').fadeOut(800);
+          			$('#live').fadeOut(800, function(){
+          				$('#arts').delay(800).fadeIn(500);	
+          			});
+        		});
+        		$('.corporate-button').click(function(){
+          			$('#recent').fadeOut(800);
+          			$('#arts').fadeOut(800);
+          			$('#live').fadeOut(800, function(){
+          				$('#corporate').delay(800).fadeIn(800);
+          			});
+        		});
+        		$('.live-button').click(function(){
+          			$('#recent').fadeOut(800);
+          			$('#corporate').fadeOut(800);
+          			$('#arts').fadeOut(800, function(){
+          				$('#live').delay(800).fadeIn(800);	
+          			});
+        		});
+      		});
+    	</script>
+
 		<script type="text/javascript">
-				$('html, body').delay(1200).animate({scrollTop: $(document).height()-$(window).height()}, 800, "swing");
+				// $('html, body').delay(1200).animate({scrollTop: $(document).height()-$(window).height()}, 800, "swing");
 				$('.album-info').click(function(){
 					var $url = $(this).attr('id');
 					$('iframe').attr('src',"http://player.vimeo.com/video/" + $url + "?autoplay=1");
