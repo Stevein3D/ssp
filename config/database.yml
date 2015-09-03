@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   database: ssp_development
-  username: ssp
+  username: Yogurt
   password: 
   pool: 5
   timeout: 5000

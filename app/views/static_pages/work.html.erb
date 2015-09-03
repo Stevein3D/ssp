@@ -63,7 +63,7 @@
 							<h3><%= clip["title"] %></h3>
 						</div>
 						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
-						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= strip_tags(clip["description"])%></p></div>
 						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
 					</div>
 				<% end %>
@@ -76,7 +76,7 @@
 							<h3><%= clip["title"] %></h3>
 						</div>
 						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
-						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= strip_tags(clip["description"]) %></p></div>
 						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
 					</div>
 				<% end %>
@@ -89,7 +89,7 @@
 							<h3><%= clip["title"] %></h3>
 						</div>
 						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
-						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= strip_tags(clip["description"])%></p></div>
 						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
 					</div>
 				<% end %>
@@ -102,7 +102,7 @@
 							<h3><%= clip["title"] %></h3>
 						</div>
 						<!--<%= link_to clip["description"], :class => 'album-info', :id => clip["id"] %>-->
-						<div class='album-info' id="<%= clip["id"]%>"><p><%= clip["description"]%></p></div>
+						<div class='album-info' id="<%= clip["id"]%>"><p><%= strip_tags(clip["description"]) %></p></div>
 						<!-- <a href="#" class='album-info' id="<%= clip["id"]%>" ><p><%= clip["description"]%></p></a> -->
 					</div>
 				<% end %>
